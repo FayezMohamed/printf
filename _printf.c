@@ -30,7 +30,8 @@ int _printf(const char *format, ...)
 				temp.s = va_arg(ar, char *);
 				while (*temp.s)
 				{
-					temp .s++;
+					_putchar(*temp.s);
+					temp.s++;
 					n++;
 				}
 			}
