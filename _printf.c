@@ -18,7 +18,30 @@ int _printf(const char *format, ...)
 		if (*format == '%')
 		{
 			format++;
-			spec
+			specs temp;
+			if (*format == 'c')
+			{
+				temp.c = va_arg(ar, int);
+				_putchar(temp.c);
+				n++;
+			}
+			else if (*format == 's')
+			{
+				temp.s = va_arg(ar, char *);
+				while (*temp.s)
+				{
+					temp .s++;
+					n++;
+				}
+			}
 		}
+		else
+		{
+			_putchar(*format);
+			n++;
+		}
+		format++;
 	}
+	va_end(ar);
+	return (n);
 }

@@ -12,5 +12,6 @@ typedef struct
 } specs;
 
 int _printf(const char *format, ...);
+int _putchar(char c);
 
 #endif
