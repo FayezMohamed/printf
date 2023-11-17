@@ -9,9 +9,10 @@ typedef struct
 {
 	char c;
 	char *s;
-} specs;
+} specifiers;
 
 int _printf(const char *format, ...);
 int _putchar(char c);
+
 
 #endif

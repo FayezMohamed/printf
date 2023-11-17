@@ -46,13 +46,3 @@ int _printf(const char *format, ...)
 	va_end(ar);
 	return (n);
 }
-int main(int argc, char *argv[])
-{
-	int i;
-
-    	for (i = 1; i < argc; i++)
-	{
-        	_printf("%s ", argv[i]);
-	}
-    	return 0;
-}
