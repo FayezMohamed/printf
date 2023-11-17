@@ -19,7 +19,9 @@ int _printf(const char *format, ...)
         {
             format++;
             if (*format == '\0')
+            {
                 break; /* handle trailing '%' as you wish */
+            }
 
             switch (*format)
             {
@@ -51,4 +53,14 @@ int _printf(const char *format, ...)
     va_end(ap);
 
     return count;
+}
+
+int main(void)
+{
+    _printf("Character:[%c]\n", 'H');
+    _printf("String:[%s]\n", "I am a string !");
+    _printf("Character:[%c]\n", 'H');
+
+    return 0;
+}
 }
