@@ -35,6 +35,9 @@ int _printf(const char *format, ...)
                 		case 'i':
                     			count += print_int(ap);
                     			break;
+				case 'D':
+					count += print_dec(ap);
+					break;
                 		case '%':
                     			count += print_percent();
                     			break;
