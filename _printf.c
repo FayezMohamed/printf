@@ -54,12 +54,3 @@ int _printf(const char *format, ...)
 
     return count;
 }
-
-int main(void)
-{
-    _printf("Character:[%c]\n", 'H');
-    _printf("String:[%s]\n", "I am a string !");
-    _printf("Character:[%c]\n", 'H');
-
-    return 0;
-}

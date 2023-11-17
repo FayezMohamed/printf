@@ -5,12 +5,6 @@
 #include <stdlib.h>
 #include <stdarg.h>
 
-typedef struct
-{
-	char c;
-	char *s;
-} specifiers;
-
 int _printf(const char *format, ...);
 int _putchar(char c);
 int print_char(va_list ap);
