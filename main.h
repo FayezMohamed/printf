@@ -13,6 +13,9 @@ typedef struct
 
 int _printf(const char *format, ...);
 int _putchar(char c);
-
+int print_char(va_list ap);
+int print_string(va_list ap);
+int _strlen(const char *str);
+int print_percent(void);
 
 #endif
