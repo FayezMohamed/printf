@@ -1,5 +1,7 @@
 #include "main.h"
 
+int print_unsigned_recursive(unsigned int num);
+
 /**
  * print_unsigned - prints unsigned integer.
  * @ap: args pointer.

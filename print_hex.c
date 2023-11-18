@@ -1,5 +1,7 @@
 #include "main.h"
 
+int print_hex_recursive(unsigned int num, int lowercase);
+
 /**
  * print_lower_hex - prints lowercase hexadecimal number.
  * @ap: arguments pointer
@@ -56,13 +58,12 @@ int print_upper_hex(va_list ap)
 int print_hex_recursive(unsigned int num, int lowercase)
 {
     int count = 0;
+    int remainder = num % 16;
 
     if (num / 16 != 0)
     {
         count += print_hex_recursive(num / 16, lowercase);
     }
-
-    int remainder = num % 16;
     char digit = (remainder < 10) ? remainder + '0' : remainder - 10 + (lowercase ? 'a' : 'A');
     _putchar(digit);
     count++;
